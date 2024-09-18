@@ -20,7 +20,7 @@ import test.task.flightcontrolapp.service.BaggageService;
 public class BaggageController {
     private final BaggageService baggageService;
 
-    @PostMapping
+    @PostMapping("/checkin")
     @Operation(summary = "Baggage check-in")
     public boolean checkIn(@RequestBody @Valid CheckInDto checkInDto) {
         return baggageService.checkIn(checkInDto);
